@@ -26,7 +26,9 @@
       "button": "Zaloguj się",
       "placeholder": "Nazwa użytkownika",
       "placeholder2": "Hasło",
-      "anchor": "Zapomniałeś hasła?"
+      "anchor": "Zapomniałeś hasła?",
+      "anchor2": "Zrób teraz!",
+      "div":"Nie masz jeszcze konta ?"
     },
     "registry": {
       "paragraph": "Zarejestruj się",
@@ -39,7 +41,7 @@
       "placeholder2": "Wprowadź swój adres e-mail",
       "placeholder3": "Wprowadź hasło",
       "placeholder4": "Potwierdź hasło",
-      "anchor": "Masz już konto?"
+      "link":" Masz już konto?"
     },
     "cart": {
       "title": "Twoje produkty w koszyku",

@@ -35,7 +35,9 @@
         "button": "Sign in",
         "placeholder": "Username",
         "placeholder2": "Password",
-        "anchor":"Forgot Password?"
+        "anchor":"Forgot Password?",
+        "anchor2": "Create one now!",
+        "div":"Don't have an account yet? "
     },
     "registry":
     {
@@ -49,7 +51,7 @@
         "placeholder2": "Enter your email",
         "placeholder3": "Enter your password",
         "placeholder4": "Password confirmation",
-        "anchor":"Already registered"
+        "link":" Already registered?"
     }
     ,
     "cart":

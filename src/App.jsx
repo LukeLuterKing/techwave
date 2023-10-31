@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/navbar";
@@ -14,8 +14,23 @@ import { AuthProvider } from "./context/AuthContext";
 import { NewsletterForm } from "./pages/NewsletterForm";
 import { Footer } from "./pages/Footer";
 import { AboutUs } from "./pages/AboutUs";
+import global_en from './translations/en/global.json';
+import global_pl from './translations/pl/global.json';
+import i18next from 'i18next';
+import { I18nextProvider } from 'react-i18next';
 
-import Profile from "./components/Profile"; // Importuj komponent "Profile"
+i18next.init({
+  interpolation: { escapeValue: false },
+  lng: 'en',
+  resources: {
+    en: {
+      global: global_en,
+    },
+    pl: {
+      global: global_pl,
+    },
+  },
+});
 
 export const ThemeContext = createContext();
 
@@ -37,36 +52,31 @@ function App() {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="App" id={theme}>
         <ShopContextProvider>
-          <Router>
-            <AuthProvider>
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Shop />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                
-                <Route path="/profile" element={<Profile />} /> {/* Dodaj trasę do strony "Profil" */}
-              </Routes>
-              <Footer />
-              <Routes>
-                <Route path="/FAQ" element={<FAQ />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/NewsletterForm" element={<NewsletterForm />} />
-                <Route path="/AboutUs" element={<AboutUs />} />
-              </Routes>
-            </AuthProvider>
-          </Router>
+          <I18nextProvider i18n={i18next}>
+            <Router>
+              <AuthProvider>
+                <Navbar />
+                <Routes>
+                  <Route path="/" element={<Shop />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="/FAQ" element={<FAQ />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/NewsletterForm" element={<NewsletterForm />} />
+                  <Route path="/AboutUs" element={<AboutUs />} />
+                </Routes>
+                <Footer />
+              </AuthProvider>
+            </Router>
+            <main>
+              <PopUp trigger={timedPopup} setTrigger={setTimedPopup}>
+                <h1>Noworoczne Promocje!!!</h1>
+                <img src="https://www.easypromosapp.com/blog/wp-content/uploads/xxss-new-years-eve-promotions-and-giveaways.jpg" alt="Noworoczne Promocje" />
+              </PopUp>
+            </main>
+          </I18nextProvider>
         </ShopContextProvider>
-        <main>
-          <PopUp trigger={timedPopup} setTrigger={setTimedPopup}>
-            <h1>Noworoczne Promocje!!!</h1>
-            <img
-              src="https://www.easypromosapp.com/blog/wp-content/uploads/xxss-new-years-eve-promotions-and-giveaways.jpg"
-              alt="Noworoczne Promocje"
-            />
-          </PopUp>
-        </main>
       </div>
     </ThemeContext.Provider>
   );

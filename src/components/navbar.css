@@ -76,4 +76,9 @@
   .user-menu li:hover {
     background-color: #f0f0f0;
   }
+  #flag{
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+  }
   
