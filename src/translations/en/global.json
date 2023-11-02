@@ -106,5 +106,10 @@
         "placeholder3": "Message",
         "button": "Send"
         
+    },
+    "foooter":
+    {
+        "link": "Contact",
+        "link2": "AboutUs"
     }
 }

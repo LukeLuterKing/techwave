@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ShoppingCart } from "phosphor-react";
+import { ShoppingCart, Microphone,MagnifyingGlass } from "phosphor-react";
 import ThemeSwitchButton from "../components/ThemeSwitchButton";
 import "./navbar.css";
 import flagaImage2 from '../assets/products/flaga.png';
 import flagaImage from '../assets/products/flaga2.png';
 import { useTranslation } from "react-i18next";
 import useAuthContext from "../context/AuthContext";
-import { User } from "phosphor-react"; // Dodano import User
+import glassSvg from "./glass.svg"; // Import the SVG image
 
 export const Navbar = ({ toggleTheme, theme, onFlagChange }) => {
   const { user, logout } = useAuthContext();
@@ -17,19 +17,19 @@ export const Navbar = ({ toggleTheme, theme, onFlagChange }) => {
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  }
+  };
 
   const handleFlagClick = () => {
     if (currentImage === flagaImage) {
       setCurrentImage(flagaImage2);
-      i18n.changeLanguage("pl"); // Zmiana języka na polski
+      i18n.changeLanguage("pl"); // Change language to Polish
       onFlagChange(flagaImage2);
     } else {
       setCurrentImage(flagaImage);
-      i18n.changeLanguage("en"); // Zmiana języka na angielski
+      i18n.changeLanguage("en"); // Change language to English
       onFlagChange(flagaImage);
     }
-  }
+  };
 
   return (
     <div className="bg-white border-gray-200 dark:bg-gray-900 p-4">
@@ -38,7 +38,6 @@ export const Navbar = ({ toggleTheme, theme, onFlagChange }) => {
           <Link to="/" className="text-white hover:text-blue-500">
             {t("navbar.link")}
           </Link>
-         
         </div>
         <div className="flex items-center space-x-4">
           <div className="search-container">
@@ -47,6 +46,11 @@ export const Navbar = ({ toggleTheme, theme, onFlagChange }) => {
               placeholder={t("navbar.placeholder")}
               className="p-2 border rounded-lg"
             />
+            <MagnifyingGlass size={32} />
+            <div className="product-image">
+              
+              <Microphone size={32} />
+            </div>
           </div>
           <img
             id="flag"
@@ -54,22 +58,23 @@ export const Navbar = ({ toggleTheme, theme, onFlagChange }) => {
             alt="Flaga Polski"
             onClick={handleFlagClick}
           />
-          
-            <div className="user-icon">
-              <User size={32} className="text-white" />
-              {!user && (
-                <ul className="user-menu">
-                  <li>
-                    <Link to="/login">{t("navbar.link2")}</Link>
-                  </li>
-                </ul>
-              )}
-            </div>
-            <ThemeSwitchButton toggleTheme={toggleTheme} theme={theme} />
-            <Link to="/cart" className="text-white hover:text-blue-500">
-              <ShoppingCart size={32} />
-            </Link>
-         
+          <div className="user-icon">
+            {user ? (
+              <Link to="/cart" className="text-white hover:text-blue-500">
+                
+              </Link>
+            ) : (
+              <ul className="user-menu">
+                <li>
+                  <Link to="/login">{t("navbar.link2")}</Link>
+                </li>
+              </ul>
+            )}
+          </div>
+          <ThemeSwitchButton toggleTheme={toggleTheme} theme={theme} />
+          <Link to="/cart" className="text-white hover:text-blue-500">
+            <ShoppingCart size={32} />
+          </Link>
         </div>
       </div>
     </div>

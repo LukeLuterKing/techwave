@@ -86,6 +86,12 @@
       "placeholder2": "E-mail",
       "placeholder3": "Wiadomość",
       "button": "Wyślij"
+    },
+
+    "foooter":
+    {
+        "link": "Kontakt",
+        "link2": "O nas"
     }
   }
   
