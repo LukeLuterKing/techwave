@@ -151,6 +151,8 @@ const finalAmountWithDiscounts = discountedAmount + finalDeliveryCost;
         <p>{t("summation.street")}: <span className="detail-label">{paymentDetails.address.street}</span></p>
         <p>{t("summation.city")}: <span className="detail-label">{paymentDetails.address.city}</span></p>
         <p>{t("summation.zipCode")}: <span className="detail-label">{paymentDetails.address.zip}</span></p>
+        <p>{t("summation.phone")}: <span className="detail-label">{paymentDetails.address.phone}</span></p>
+
         <p>{t("summation.deliveryMethod")}:<span className="detail-label">{paymentDetails.deliveryMethod}</span></p>
         <p>{t("summation.paymentMethod")}:<span className="detail-label">{paymentDetails.paymentMethod}</span></p>
         <p>{t("summation.companyName")}:<span className="detail-label"> {companyDetails.companyName}</span></p>
