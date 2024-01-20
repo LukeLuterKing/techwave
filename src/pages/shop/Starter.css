@@ -12,14 +12,15 @@
 	align-items: center;
 	overflow: hidden;
 	margin-top: 16px; /* Adjust this value to align with the navbar if necessary */
+	border-radius: 10px;
 }
 
 .image-container img {
-    max-height: 66vh;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    border-radius: 25px;
+	max-height: 66vh;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	border-radius: 25px;
 }
 
 .products-section {
@@ -54,19 +55,15 @@
 
 /* This media query is for smaller screens where we want to stack the items instead of having them in a flex row */
 @media (max-width: 640px) {
-	.shop {
-		flex-direction: column;
-		padding: 10px;
-	}
-	
-	.filters {
-		width: 100%;
-		margin-bottom: 16px;
-	}
-	
-	.products, .products-section {
-		width: 100%;
-	}
+    .products-section {
+        height: auto; /* Usuń ograniczenie wysokości */
+        overflow-y: visible; /* Usuń przewijanie dla tej sekcji */
+    }
+
+    .products1 {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        gap: 16px; /* Dostosuj odstęp, jeśli to konieczne */
+    }
 }
 
 /* Additional media queries for responsive design */
