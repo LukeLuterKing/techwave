@@ -309,6 +309,7 @@
         "discount": "Discount",
         "purchaseAndPay": "Purchase and Pay",
         "phone": "phone number",
+        "thanks": "Thank you for your order!",
         
 
         "nip": "NIP",
@@ -489,6 +490,10 @@
         "zwroc":"Return order",
         "brak":"no orders",
         "przejdz":"Go to sites with prodcuts and make your first order!"
+      }
+      ,
+"delivery":{
+        "kurier":"Courier"
       }
 
     }

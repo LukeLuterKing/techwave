@@ -218,16 +218,16 @@ if (privateMethod === 'company') {
   
           <h2 className="H2">{t("payment.title3")}</h2>
           <div className="deliverydiv">
-            <div className="deliveryinputradio">
-              <input type="radio" id="courier" name="deliveryMethod" value="courier" checked={deliveryMethod === 'courier'} onChange={handleDeliveryChange} />
-              <label htmlFor="courier">{t("payment.label3")}</label>
+          <div className="deliveryinputradio">
+              <input type="radio" id={t("delivery.kurier")} name="deliveryMethod" value={t("delivery.kurier")} checked={deliveryMethod === t("delivery.kurier")} onChange={handleDeliveryChange} />
+              <label htmlFor={t("delivery.kurier")}>{t("payment.label3")}</label>
             </div>
             <div className="deliveryinputradio">
               <input type="radio" id="inStore" name="deliveryMethod" value="inStore" checked={deliveryMethod === 'inStore'} onChange={handleDeliveryChange} />
               <label htmlFor="inStore">{t("payment.label4")}</label>
             </div>
             <div className="deliveryinputradio">
-              <input type="radio" id="idex" name="deliveryMethod" value="idex" checked={deliveryMethod === 'idex'} onChange={handleDeliveryChange} />
+              <input type="radio" id="idex" name="deliveryMethod" value="idex" checked={deliveryMethod === 'Inpost'} onChange={handleDeliveryChange} />
               <label htmlFor="idex">InPost</label>
             </div>
           </div>
@@ -235,7 +235,7 @@ if (privateMethod === 'company') {
           <h2 className="H2">{t("payment.title4")}</h2>
           <div className="deliverydiv">
             <div className="deliveryinputradio">
-              <input type="radio" id="online" name="paymentMethod" value="online" checked={paymentMethod === 'online'} onChange={handlePaymentChange} />
+              <input type="radio" id="online" name="paymentMethod" value="kurier" checked={paymentMethod === 'online'} onChange={handlePaymentChange} />
               <label htmlFor="online">{t("payment.label5")}</label>
             </div>
             <div className="deliveryinputradio">

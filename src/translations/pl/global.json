@@ -299,7 +299,8 @@
       "phone": "Numer telefonu",
 
       "nip": "NIP",
-      "companyName": "Nazwa firmy"
+      "companyName": "Nazwa firmy",
+      "thanks": "Dziękujemy za zakupy!"
 
     },
 
@@ -462,6 +463,10 @@
         "brak":"Brak zamówień",
         "przejdz":"Przejdź do strony z produktami i złóż swoje pierwsze zamówienie"
 
+      }
+      ,
+      "delivery":{
+        "kurier":"Kurier"
       }
 
 }

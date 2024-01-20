@@ -16,7 +16,7 @@ export const ThankYou = () => {
   return (
     <div className="thankYou">
       <div className="thankYouTitle text-center mb-8">
-        <h1>Dziękujemy za zakupy!</h1>
+        <h1>{t("summation.thanks")}</h1>
       </div>
     </div>
   );
