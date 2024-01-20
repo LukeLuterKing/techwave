@@ -39,6 +39,7 @@ import AccountSettings from "./pages/AccountSettings";
 import Order from "./pages/Order";
 import Return from "./pages/Return";
 import ShowComment from "./pages/ShowComment";
+import Starter from "./pages/shop/Starter";
 
 export const ThemeContext = createContext();
 i18next.init({
@@ -103,7 +104,8 @@ function App() {
                 <Navbar setSelectedCategory={setSelectedCategory}/>
                 <ChatBubble />
                 <Routes>
-                  <Route path="/" element={<Shop selectedCategory={selectedCategory}/>} />
+                  <Route path="/" element={<Starter />} />
+                  <Route path="/Shop" element={<Shop selectedCategory={selectedCategory}/>} />
                   <Route path="/ProductSite/:productId" element={<ProductSite />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/login" element={<Login />} />

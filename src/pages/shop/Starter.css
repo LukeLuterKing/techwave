@@ -1,0 +1,99 @@
+.shop1 {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	margin-top: 0; /* Ensure there is no extra space above the shop container */
+}
+
+.image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	margin-top: 16px; /* Adjust this value to align with the navbar if necessary */
+}
+
+.image-container img {
+    max-height: 66vh;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    border-radius: 25px;
+}
+
+.products-section {
+	margin-top: 16px; /* Ensure consistent spacing with the image container */
+	height: auto; /* Changed from 33vh to auto to accommodate content */
+	overflow-y: auto; /* Allows for scrolling if the content exceeds the container height */
+}
+
+.products1 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 5%; /* Increased gap for more space between products */
+}
+
+.product {
+	border: 1px solid #111827;
+	border-radius: 25px;
+	padding: 10px;
+	transition: .3s ease-in;
+	cursor: pointer;
+	text-align: center;
+}
+
+.product img {
+	height: 150px;
+	transition: transform .3s ease-in;
+	margin: 0 auto; /* Center the image horizontally */
+	display: block;
+}
+
+/* ... all your other styles ... */
+
+/* This media query is for smaller screens where we want to stack the items instead of having them in a flex row */
+@media (max-width: 640px) {
+	.shop {
+		flex-direction: column;
+		padding: 10px;
+	}
+	
+	.filters {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+	
+	.products, .products-section {
+		width: 100%;
+	}
+}
+
+/* Additional media queries for responsive design */
+@media (max-width: 1024px) {
+	.shop {
+		padding: 8px;
+	}
+}
+
+@media (max-width: 768px) {
+	.shop {
+		padding: 16px;
+	}
+}
+
+@media (max-width: 680px) {
+	.shop {
+		padding: 16px;
+		margin-bottom: 100px;
+	}
+}
+
+@media (max-width: 426px) {
+	.shop {
+		padding: 16px;
+		margin-bottom: 90px;
+	}
+}
+
+/* Add any additional styles you may need below */

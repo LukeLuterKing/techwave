@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "../api/axios";
-import './Orders.css'; // Import stylów z Orders.css
-import Profile from "../components/Profile"; // Importuj komponent "Profile"
+import './Orders.css'; 
 
 const Returns = () => {
     const [returns, setReturns] = useState([]);
@@ -20,20 +19,22 @@ const Returns = () => {
             });
     }, []);
 
-    
-
-
-
     return (
         <div>
-            <ul>
-                {returns.map(returnItem => (
-                    <li key={returnItem.id} className="order-item"> {/* Używamy tej samej klasy co w Orders */}
-                        {returnItem.productname} - {returnItem.Price} zł - {returnItem.quantity} szt.
-                        {/* Możesz dodać więcej informacji o zwrocie tutaj */}
-                    </li>
-                ))}
-            </ul>
+            {returns.length > 0 ? (
+                <ul>
+                    {returns.map(returnItem => (
+                        <li key={returnItem.id} className="order-item">
+                            {returnItem.productname} - {returnItem.Price} zł - {returnItem.quantity} szt.
+                            {/* Dodatkowe informacje o zwrocie */}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <div className="no-orders">
+                <p>Brak zwrotów</p>
+        </div>
+            )}
         </div>
     );
 };

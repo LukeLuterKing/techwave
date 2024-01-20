@@ -58,7 +58,7 @@ const Profile = () => {
             <h1>{t("profile.title")} {user.name}!</h1>
           </div>
           {/* Przyciski z większą i grubszą czcionką */}
-          <div className="w-full p-4" style={{borderRight: '1px solid gray', paddingRight: '10px'}}>
+          <div className="w-full p-4" style={{borderRight: '0px solid gray', paddingRight: '10px'}}>
             <button className="block w-full p-3 mb-4 text-1xl font-semibold text-black-500 rounded hover:border-gray-500 hover:border-2 hover:rounded-lg hover:bg-gray-200" onClick={() => changeView("Order")}>
               <AiOutlineShopping className="inline mr-2" />
               {t("profile.button")}

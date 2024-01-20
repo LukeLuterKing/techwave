@@ -110,55 +110,11 @@ export const Navbar = ({ toggleTheme, theme, setSelectedCategory }) => {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 p-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <Link to="/" className="text-white hover:text-blue-500" onClick={()=>{
-          setSelectedCategory("");
-        }}>
+        <Link to="/" className="text-white hover:text-blue-500">
           <img src={logo} alt="logo" className="h-12" />
         </Link>
-
-        <div className="flex items-center space-x-4">
-          <ThemeSwitchButton toggleTheme={toggleTheme} theme={theme} />
-          {user ? 
-          (
-            <Link to="/profile">
-              <User size={32} className="text-white hover:text-blue-500" />
-            </Link>
-          ) : (
-            <Link to="/login">
-              <User size={32} className="text-white hover:text-blue-500" />
-            </Link>
-          )}
-
-
-            <Link to="/ComparationSite">
-              <Scales size={32} className="text-white hover:text-blue-500" />
-            </Link>
-          
-          
-            <Link to="/cart" className="text-white hover:text-blue-500 relative">
-            <ShoppingCart size={32} />
-            {cartItemCount > 0 && (
-              <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-2">
-                {cartItemCount <= 9 ? cartItemCount : '9+'}
-              </span>
-            )}
-          </Link>
-          <button onClick={handleMicClick}>
-            <Microphone className="microphone" color="white" size={32} />
-          </button>
-          <img
-            id="flag"
-            src={currentImage}
-            alt="Flag"
-            onClick={handleFlagClick}
-          />
-        </div>
-
-        <button className="md:hidden text-white " onClick={handleMobileMenuToggle}>
-          &#9776;
-        </button>
-
-        <div className={`w-full md:block ${isMobileMenuOpen ? '' : 'hidden'}`}>
+        <div className="search-input-container">
+            <div className={`w-full md:block ${isMobileMenuOpen ? '' : 'hidden'}`}>
           <input
             type="text"
             value={searchTerm}
@@ -185,10 +141,53 @@ export const Navbar = ({ toggleTheme, theme, setSelectedCategory }) => {
            
           </button>
         </div>
+          </div>
+        
+        <div className="flex items-center space-x-4">
+          <ThemeSwitchButton toggleTheme={toggleTheme} theme={theme} />
+          {user ? (
+            <Link to="/profile">
+              <User size={32} className="text-white hover:text-blue-500" />
+            </Link>
+          ) : (
+            <Link to="/login">
+              <User size={32} className="text-white hover:text-blue-500" />
+            </Link>
+          )}
+
+          <Link to="/ComparationSite">
+            <Scales size={32} className="text-white hover:text-blue-500" />
+          </Link>
+
+          <Link to="/cart" className="text-white hover:text-blue-500 relative">
+            <ShoppingCart size={32} />
+            {cartItemCount > 0 && (
+              <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-2">
+                {cartItemCount <= 9 ? cartItemCount : '9+'}
+              </span>
+            )}
+          </Link>
+          
+          <button onClick={handleMicClick}>
+            <Microphone className="microphone" color="white" size={32} />
+          </button>
+          <img
+            id="flag"
+            src={currentImage}
+            alt="Flag"
+            onClick={handleFlagClick}
+          />
+
+          
+        </div>
+
+        <button className="md:hidden text-white" onClick={handleMobileMenuToggle}>
+          &#9776;
+        </button>
       </div>
-      <NavbarCategories  
-        setSelectedCategory={setSelectedCategory}
-      />
+      <div className={`w-full md:block ${isMobileMenuOpen ? '' : 'hidden'}`}>
+      <NavbarCategories setSelectedCategory={setSelectedCategory} />
+      </div>
     </nav>
   );
 };

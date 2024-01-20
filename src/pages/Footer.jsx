@@ -6,16 +6,22 @@ import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-sv
 import "./Footer.css";
 
 export const Footer = () => {
-  const {t} = useTranslation("global");
+  const { t } = useTranslation("global");
   const [scrollY, setScrollY] = useState(0);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+  const [atBottom, setAtBottom] = useState(false);
 
   const handleResize = () => {
     setIsDesktop(window.innerWidth > 768);
   };
 
+  const checkBottom = () => {
+    return (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+  };
+
   const handleScroll = () => {
     setScrollY(window.scrollY);
+    setAtBottom(checkBottom());
   };
 
   useEffect(() => {
@@ -26,6 +32,13 @@ export const Footer = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // Sprawdź, czy stopka powinna być aktywna
+  const shouldShowFooter = isDesktop || atBottom;
+
+  if (!shouldShowFooter) {
+    return null;
+  }
 
   return (
     <div className={`footer-container ${isDesktop || scrollY > 100 ? "active" : ""}`}>

@@ -55,6 +55,9 @@
 	padding: 10px;
 	border-radius: 20px;
 }
+#dark .product-specs {
+	background-color: #333;
+}
 
 .product-specs p {
 	margin: 30px 0;
@@ -201,6 +204,10 @@
 	padding: 10px;
 	width: 100%;
 }
+#dark .comment-content {
+    color: #ccc;
+    background: #333;
+}
 
 .comment-author {
 	font-weight: bold;
@@ -230,9 +237,13 @@
 	flex-direction: column;
 	margin-top: 20px;
 	padding: 20px;
-	background-color: #f7f7f7;
+	background-color: #ccc;
 	border-radius: 10px;
 	width: 100%;
+}
+#dark .comment-form {
+	background-color: #333;
+	color: #ccc;
 }
 
 .comment-form label {
@@ -248,7 +259,11 @@
 	border-radius: 5px;
 	border: 1px solid #ccc;
 }
-
+#dark .comment-form input, .comment-form textarea, .comment-form select {
+    background-color: #333;
+    color: #ccc;
+    border: 1px solid #ccc;
+}
 .comment-form textarea {
 	resize: vertical;
 }
