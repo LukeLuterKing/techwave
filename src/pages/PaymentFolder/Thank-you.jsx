@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Summation.css';
+import { useTranslation } from "react-i18next";
+
 
 export const ThankYou = () => {
   const navigate = useNavigate();
+  const {t} = useTranslation("global");
 
   useEffect(() => {
     const timer = setTimeout(() => {

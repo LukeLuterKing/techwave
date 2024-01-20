@@ -1,87 +1,92 @@
 .orders-container {
-	font-family: "Arial", sans-serif;
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
-	display: block;
+    font-family: "Arial", sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
 }
 
 .orders-container h1 {
-	text-align: center;
-	margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .order-item {
-	display: block;
-	background-color: #f9f9f9;
-	border: 1px solid #ddd;
-	border-radius: 8px;
-	padding: 15px;
-	margin-bottom: 10px;
-	font-size: 18px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-	position: relative;
+    display: block;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    position: relative;
+}
+#dark .order-item {
+    background-color: #333;
+    border: 1px solid #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
 }
 
 .order-item:hover {
-	background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .return-button {
-	background-color: #f59292;
-	color: white;
-	border: none;
-	border-radius: 25px;
-	padding: 10px 20px;
-	font-size: 16px;
-	position: absolute;
-	right: 2%;
-	top: 10%;
-	cursor: pointer;
-	outline: none;
+    background-color: #f59292;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    cursor: pointer;
+    outline: none;
 }
 
 .return-button:hover {
-	background-color: #f57a7a;
+    background-color: #f57a7a;
 }
 .no-orders {
-	text-align: center;
-	margin-top: 50px;
+    text-align: center;
+    margin-top: 50px;
   }
   
   .no-orders p {
-	font-size: 1.2em;
-	margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
   }
   
   .order-button {
-	display: inline-block;
-	background-color: #007bff; /* Przykładowy kolor tła */
-	color: #ffffff; /* Kolor tekstu */
-	padding: 10px 20px;
-	border-radius: 5px;
-	text-decoration: none; /* Usunięcie podkreślenia tekstu */
-	font-weight: bold;
-	transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: #007bff; /* Przykładowy kolor tła */
+    color: #ffffff; /* Kolor tekstu */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
   }
   
   .order-button:hover,
   .order-button:focus {
-	background-color: #0056b3; /* Ciemniejszy kolor tła dla efektu hover */
-	color: #ffffff;
-	text-decoration: none; /* Upewnij się, że tekst nie jest podkreślony po najechaniu */
+    background-color: #0056b3; /* Ciemniejszy kolor tła dla efektu hover */
+    color: #ffffff;
+    text-decoration: none; /* Upewnij się, że tekst nie jest podkreślony po najechaniu */
   }
   
   .order-button span {
-	font-size: 2em; /* Większy rozmiar emoji */
+    font-size: 2em; /* Większy rozmiar emoji */
   }
   
 
 @media screen and (max-width: 600px) {
-	.return-button {
-		font-size: 14px;
-		padding: 8px 16px;
-		position: static;
-		margin-top: 10px;
-	}
+    .return-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        position: static;
+        margin-top: 10px;
+    }
 }
