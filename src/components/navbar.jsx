@@ -123,7 +123,7 @@ export const Navbar = ({ toggleTheme, theme, setSelectedCategory }) => {
             onChange={(e) => setSearchTerm(e.target.value)}
             onFocus={() => setDropdownVisible(true)}
           />
-          {isLoading && <div>Loading...</div>}
+          {isLoading && <div>{t("navbar.Loading")}</div>}
           {error && <div>{error}</div>}
           {isSearchActive && dropdownVisible && (
             <ul className="dropdown-list" ref={dropdownRef}>

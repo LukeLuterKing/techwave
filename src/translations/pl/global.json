@@ -24,6 +24,8 @@
     "link5":"Filtruj produkty",
     "placeholder": "Szukaj produktu",
     "Search": "Szukaj"
+    ,
+        "Loading": "Loading..."
   },
   "login": {
     "paragraph": "Zaloguj się",
@@ -447,5 +449,19 @@
     "email":"Email jest zajety"
 
 
+      },
+      "alerts":{
+
+        "delete":"Czy na pewno chcesz usunąć swoje konto? Tej operacji nie można cofnąć.",
+        "confirm":"Czy na pewno chcesz zwrócić ten produkt?"
+      },
+    
+      "order":{
+        "zwrot":"Zamówienie zostało pomyślnie zwrócone.",
+        "zwroc":"Zwróć",
+        "brak":"Brak zamówień",
+        "przejdz":"Przejdź do strony z produktami i złóż swoje pierwsze zamówienie"
+
       }
+
 }

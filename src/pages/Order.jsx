@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from "../api/axios";
 import { useNavigate , Link} from 'react-router-dom';
 import './Orders.css'; // Upewnij się, że plik stylów istnieje
-
+import { useTranslation } from "react-i18next";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [showReturnSuccess, setShowReturnSuccess] = useState(false);
   const navigate = useNavigate();
-
+  const { t } = useTranslation("global");
   // Funkcja do ładowania zamówień
   const fetchOrders = () => {
     axios.get('/api/orders', { withCredentials: true })
@@ -30,7 +30,7 @@ const Orders = () => {
   }, []);
 
   const handleReturn = async (orderId) => {
-    const confirmReturn = window.confirm('Czy na pewno chcesz zwrócić ten produkt?');
+    const confirmReturn = window.confirm(t("alert.confirm"));
     if (!confirmReturn) {
       return;
     }
@@ -60,15 +60,15 @@ const Orders = () => {
                 {order.productname} - {order.Price} zł - {order.quantity} szt.
               </span>
               <button onClick={() => handleReturn(order.id)} className="return-button">
-                Zwróć
+              {t("order.zwroc")}
               </button>
             </li>
           ))}
         </ul>
       ) : (
         <div className="no-orders">
-          <p>Brak zamówień</p>
-          <p>Przejdź do strony z produktami i złóż swoje pierwsze zamówienie</p>
+          <p>{t("order.brak")}</p>
+          <p>{t("order.przejdz")}</p>
           
           <Link to="/shop" className="order-button">
             <span role="img" aria-label="smile">😊</span>
@@ -77,7 +77,7 @@ const Orders = () => {
       )}
       {showReturnSuccess && (
         <div className="success-modal">
-          <p>Zwrot zamówienia został zrealizowany pomyślnie.</p>
+          <p>{t("order.zwrot")}</p>
         </div>
       )}
     </div>

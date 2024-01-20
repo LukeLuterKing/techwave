@@ -31,7 +31,7 @@ const AccountSettings = () => {
   const handleDeleteAccount = async () => {
     
     const confirmed = window.confirm(
-      'Czy na pewno chcesz usunąć swoje konto? Tej operacji nie można cofnąć.'
+      t("alert.delete")
     );
   
     if (confirmed) {

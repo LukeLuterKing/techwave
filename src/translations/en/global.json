@@ -27,7 +27,8 @@
         "link5":"Filter page",
         "placeholder": "Search product ",
         "Search": "Search"
-
+        ,
+    "Loading": "Ładowanie..."
         
     },
     "login":
@@ -476,5 +477,18 @@
     "pass3": "Passwords must match.",
     "email":"Email is taken."
 
+      },
+      "alerts":{
+
+        "delete":"Do you want to delete your account? This action cannot be undone.",
+        "confirm":"Do you want to confirm your order?"
+
+      },
+      "order":{
+        "zwrot":"The order was returned successfully.",
+        "zwroc":"Return order",
+        "brak":"no orders",
+        "przejdz":"Go to sites with prodcuts and make your first order!"
       }
-}
+
+    }
