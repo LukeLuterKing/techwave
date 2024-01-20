@@ -63,13 +63,13 @@ export const Footer = () => {
         </Link>
 
         <div className="footer-social-media">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+          <a href="https://www.facebook.com/profile.php?id=61555621205834" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
             <FontAwesomeIcon icon={faFacebookF} className="faFacebookF" />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+          <a href="https://www.instagram.com/techwave432/" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
               <FontAwesomeIcon icon={faInstagram} className="faInstagram" />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+          <a href="https://twitter.com/wave_tech84324" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
               <FontAwesomeIcon icon={faTwitter} className="faTwitter" />
           </a>
         </div>

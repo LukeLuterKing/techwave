@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from "../api/axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link} from 'react-router-dom';
 import './Orders.css'; // Upewnij się, że plik stylów istnieje
-import Profile from "../components/Profile"; // Importuj komponent "Profile"
+
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -50,27 +50,39 @@ const Orders = () => {
     }
   };
 
-  return (
-    <div>
-      <ul>
-        {orders.map(order => (
-          <li key={order.id} className="order-item">
-            <span className="order-details">
-              {order.productname} - {order.Price} zł - {order.quantity} szt.
-            </span>
-            <button onClick={() => handleReturn(order.id)} className="return-button">
-              Zwróć
-            </button>
-          </li>
-        ))}
-      </ul>
-      {showReturnSuccess && (
-        <div className="success-modal">
-          <p>Zwrot zamówienia został zrealizowany pomyślnie.</p>
-        </div>
-      )}
-    </div>
-  );
+ return (
+  <div>
+     {orders.length > 0 ? (
+    <ul>
+      {orders.map(order => (
+        <li key={order.id} className="order-item">
+          <span className="order-details">
+            {order.productname} - {order.Price} zł
+          </span>
+          <button onClick={() => handleReturn(order.id)} className="return-button">
+            Zwróć
+          </button>
+        </li>
+      ))}
+    </ul>
+    ) : (
+              <div className="no-orders">
+                <p>Brak zamówień</p>
+                <p>Przejdź do strony z produktami i złóż swoje pierwsze zamówienie</p>
+                {/* Dodaj Link do strony z produktami lub koszyka */}
+                {/* <Link to="/" className="order-button">
+                  <span role="img" aria-label="smile">😊</span>
+                </Link> */}
+              </div>
+            )}
+    {showReturnSuccess && (
+      <div className="success-modal">
+        <p>Zwrot zamówienia został zrealizowany pomyślnie.</p>
+      </div>
+    )}
+  </div>
+);
 };
 
 export default Orders;
+
