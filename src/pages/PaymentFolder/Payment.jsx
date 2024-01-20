@@ -15,9 +15,9 @@ const {t} = useTranslation("global");
   
   const totalAmount = getTotalCartAmount();
   const [promoCode, setPromoCode] = useState('');
-  const [deliveryMethod, setDeliveryMethod] = useState('courier');
+  const [deliveryMethod, setDeliveryMethod] = useState(t("delivery.kurier"));
   const [paymentMethod, setPaymentMethod] = useState('online');
-  const [privateMethod, setPrivateMethod] = useState('company');
+  const [privateMethod, setPrivateMethod] = useState('privatePerson');
   const [isTermsChecked, setIsTermsChecked] = useState(false);
   const [isNewsletterChecked, setIsNewsletterChecked] = useState(false);
   const [deliveryCost, setDeliveryCost] = useState(20);
@@ -40,7 +40,7 @@ const {t} = useTranslation("global");
     setDeliveryMethod(selectedMethod);
   
     let cost = 0;
-    if (selectedMethod === 'courier') {
+    if (selectedMethod === t("delivery.kurier")) {
       cost = 20;
     } // Możesz dodać inne warunki dla różnych metod dostawy
   
@@ -227,8 +227,8 @@ if (privateMethod === 'company') {
               <label htmlFor="inStore">{t("payment.label4")}</label>
             </div>
             <div className="deliveryinputradio">
-              <input type="radio" id="idex" name="deliveryMethod" value="idex" checked={deliveryMethod === 'Inpost'} onChange={handleDeliveryChange} />
-              <label htmlFor="idex">InPost</label>
+              <input type="radio" id="InPost" name="deliveryMethod" value="InPost" checked={deliveryMethod === 'Inpost'} onChange={handleDeliveryChange} />
+              <label htmlFor="InPost">InPost</label>
             </div>
           </div>
   
@@ -250,14 +250,15 @@ if (privateMethod === 'company') {
   
           <h2 className="H2">{t("payment.title5")}</h2>
 <div className="deliverydiv">
+<div className="deliveryinputradio">
+    <input type="radio" id="privatePerson" name="privateMethod" value="privatePerson" checked={privateMethod === 'privatePerson'} onChange={handlePrivateMethodChange} />
+    <label htmlFor="privatePerson">{t("payment.label8")}</label>
+  </div>
   <div className="deliveryinputradio">
     <input type="radio" id="company" name="privateMethod" value="company" checked={privateMethod === 'company'} onChange={handlePrivateMethodChange} />
     <label htmlFor="company">{t("payment.label7")}</label>
   </div>
-  <div className="deliveryinputradio">
-    <input type="radio" id="privatePerson" name="privateMethod" value="privatePerson" checked={privateMethod === 'privatePerson'} onChange={handlePrivateMethodChange} />
-    <label htmlFor="privatePerson">{t("payment.label8")}</label>
-  </div>
+ 
 </div>
 
 {privateMethod === 'company' && (
