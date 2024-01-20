@@ -33,6 +33,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 5%; /* Increased gap for more space between products */
+	padding-bottom: 10%;
 }
 
 .product {
