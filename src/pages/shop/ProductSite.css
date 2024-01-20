@@ -259,7 +259,7 @@
 	border-radius: 5px;
 	border: 1px solid #ccc;
 }
-#dark .comment-form input, .comment-form textarea, .comment-form select {
+#dark .comment-form input, #dark .comment-form textarea, #dark .comment-form select {
     background-color: #333;
     color: #ccc;
     border: 1px solid #ccc;
@@ -452,4 +452,9 @@
 		margin-bottom: 10%;
 		padding-bottom: 10%;
 	}
+
+}
+#dark .comment-form.disabled input, #dark .comment-form.disabled textarea, #dark .comment-form.disabled select {
+    background-color: #333;
+    color: #ccc;
 }

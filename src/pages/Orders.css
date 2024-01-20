@@ -44,6 +44,38 @@
 .return-button:hover {
 	background-color: #f57a7a;
 }
+.no-orders {
+	text-align: center;
+	margin-top: 50px;
+  }
+  
+  .no-orders p {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+  }
+  
+  .order-button {
+	display: inline-block;
+	background-color: #007bff; /* Przykładowy kolor tła */
+	color: #ffffff; /* Kolor tekstu */
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none; /* Usunięcie podkreślenia tekstu */
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+  }
+  
+  .order-button:hover,
+  .order-button:focus {
+	background-color: #0056b3; /* Ciemniejszy kolor tła dla efektu hover */
+	color: #ffffff;
+	text-decoration: none; /* Upewnij się, że tekst nie jest podkreślony po najechaniu */
+  }
+  
+  .order-button span {
+	font-size: 2em; /* Większy rozmiar emoji */
+  }
+  
 
 @media screen and (max-width: 600px) {
 	.return-button {

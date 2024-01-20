@@ -50,39 +50,38 @@ const Orders = () => {
     }
   };
 
- return (
-  <div>
-     {orders.length > 0 ? (
-    <ul>
-      {orders.map(order => (
-        <li key={order.id} className="order-item">
-          <span className="order-details">
-            {order.productname} - {order.Price} zł
-          </span>
-          <button onClick={() => handleReturn(order.id)} className="return-button">
-            Zwróć
-          </button>
-        </li>
-      ))}
-    </ul>
-    ) : (
-              <div className="no-orders">
-                <p>Brak zamówień</p>
-                <p>Przejdź do strony z produktami i złóż swoje pierwsze zamówienie</p>
-                {/* Dodaj Link do strony z produktami lub koszyka */}
-                {/* <Link to="/" className="order-button">
-                  <span role="img" aria-label="smile">😊</span>
-                </Link> */}
-              </div>
-            )}
-    {showReturnSuccess && (
-      <div className="success-modal">
-        <p>Zwrot zamówienia został zrealizowany pomyślnie.</p>
-      </div>
-    )}
-  </div>
-);
+  return (
+    <div>
+      {orders.length > 0 ? (
+        <ul>
+          {orders.map(order => (
+            <li key={order.id} className="order-item">
+              <span className="order-details">
+                {order.productname} - {order.Price} zł - {order.quantity} szt.
+              </span>
+              <button onClick={() => handleReturn(order.id)} className="return-button">
+                Zwróć
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className="no-orders">
+          <p>Brak zamówień</p>
+          <p>Przejdź do strony z produktami i złóż swoje pierwsze zamówienie</p>
+          
+          <Link to="/shop" className="order-button">
+            <span role="img" aria-label="smile">😊</span>
+          </Link>
+        </div>
+      )}
+      {showReturnSuccess && (
+        <div className="success-modal">
+          <p>Zwrot zamówienia został zrealizowany pomyślnie.</p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Orders;
-
