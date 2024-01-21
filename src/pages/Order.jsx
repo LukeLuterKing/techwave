@@ -51,7 +51,7 @@ const Orders = () => {
   };
 
   return (
-    <div>
+    <div className='ml-5'>
       {orders.length > 0 ? (
         <ul>
           {orders.map(order => (

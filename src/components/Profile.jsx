@@ -88,7 +88,7 @@ const Profile = () => {
         </div>
 
         {/* Zawartość główna */}
-        <div className={`${contentClass} p-4 absolute right-0`}>
+        <div className={`${contentClass} p-4 absolute right-0 ml-5`}>
           {currentView === "Order" && <Order />}
           {currentView === "Return" && <Return />}
           {currentView === "ShowComment" && <ShowComment />}

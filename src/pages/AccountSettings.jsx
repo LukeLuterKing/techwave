@@ -121,36 +121,9 @@ const AccountSettings = () => {
   };
   const [isOpen,setIsOpen] = useState(true)
   return (
-    <div className='grid grid-cols-3 '>
+    <div className='grid grid-cols-3 ml-5'>
 
-     {/* <div className='mt-4 flex flex-col gap-4 relative justify-self-start'>
-        <Link to='/Profile' className='transition duration-300 flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 hover:text-white rounded-md'>
-          <User size={30} />
-          <h2 className='text-xl'>{t("profile.button6")}</h2>
-        </Link>
-        <Link to='/Orders' className='transition duration-300 flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 hover:text-white rounded-md'>
-          <ClipboardText size={30} />
-          <h2 className='text-xl'>{t("profile.button")}</h2>
-        </Link>
-        <Link to='/Returns' className='transition duration-300 flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 hover:text-white rounded-md'>
-          <ArrowUpLeft size={30} />
-          <h2 className='text-xl'>{t("profile.button2")}</h2>
-        </Link>
-        <Link to='/Opinions' className='transition duration-300 flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 hover:text-white rounded-md'>
-          <ChatCircle size={30} />
-          <h2 className='text-xl'>{t("profile.button3")}</h2>
-        </Link>
-        <Link to='/AccountSettings' className='transition duration-300 flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 hover:text-white rounded-md'>
-          <GearSix size={30} />
-          <h2 className='text-xl'>{t("profile.button4")}</h2>
-        </Link>
-
-        <button className='transition duration-300 ease-in-out flex items-center text-xl gap-3.5 font-medium p-2 hover:bg-gray-800 hover:text-white rounded-md' onClick={handleLogout}>
-          <SignOut size={30} className='cursor-pointer' />
-          {t("profile.button5")}
-        </button>
-      </div>  */}
-
+   
 
       <div className='m-3 text-xl text-gray-900 col-span-2 font-semibold '>
         {message && <p className="text-green-500 mt-2">{message}</p>}

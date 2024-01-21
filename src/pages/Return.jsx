@@ -20,7 +20,7 @@ const Returns = () => {
     }, []);
 
     return (
-        <div>
+        <div className='ml-5'>
             {returns.length > 0 ? (
                 <ul>
                     {returns.map(returnItem => (
