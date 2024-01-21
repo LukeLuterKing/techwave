@@ -1,6 +1,7 @@
 #light #H11 {
 	text-align: center;
 	font-size: 40px;
+	font-family: "Times New Roman", Times, serif;
 	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -9,6 +10,7 @@
 #dark #H11 {
 	text-align: center;
 	font-size: 40px;
+	font-family: "Times New Roman", Times, serif;
 	color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -17,6 +19,7 @@
 #light .H2 {
 	text-align: center;
 	font-size: 30px;
+	font-family: "Times New Roman", Times, serif;
 	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -25,6 +28,7 @@
 #dark .H2 {
 	text-align: center;
 	font-size: 30px;
+	font-family: "Times New Roman", Times, serif;
 	color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -44,6 +48,7 @@
 	max-width: 800px;
 	margin: 0 auto;
 	padding: 20px;
+	font-family: "Times New Roman", Times, serif;
 }
 
 .deliverydiv {
@@ -52,6 +57,7 @@
 	margin: 10px auto;
 	padding: 10px;
 	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
 	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -61,6 +67,7 @@
 #light .deliverycheckbox {
 	margin: 10px auto;
 	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
 	color: black;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -70,6 +77,7 @@
 #dark .deliverycheckbox {
 	margin: 10px auto;
 	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
 	color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -82,6 +90,7 @@
 	margin: 10px auto;
 	border: solid 1px black;
 	border-radius: 10px;
+	font-family: "Times New Roman", Times, serif;
 	margin-bottom: 20px;
 	font-size: 14px;
 	line-height: 30px;
@@ -91,8 +100,10 @@
 	width: calc(100% - 20px);
 	width: 100%;
 	margin: 10px auto;
+	background-color: #333;
 	border: solid 1px black;
 	border-radius: 10px;
+	font-family: "Times New Roman", Times, serif;
 	margin-bottom: 20px;
 	font-size: 14px;
 	line-height: 30px;
@@ -101,6 +112,7 @@
 
 #light .deliveryinputradio {
 	appearance: none;
+	font-family: "Times New Roman", Times, serif;
 	display: block;
 	margin-top: 1px;
 	align-items: center;
@@ -108,6 +120,7 @@
 
 #dark .deliveryinputradio {
 	appearance: none;
+	font-family: "Times New Roman", Times, serif;
 	display: block;
 	margin-top: 1px;
 	color: white;
@@ -150,6 +163,7 @@
 }
 
 .paybutt {
+	font-family: "Times New Roman", Times, serif;
 	margin: 10px auto;
 	border: solid 1px black;
 	border-radius: 5px;
@@ -172,6 +186,7 @@
 	padding: 1rem;
 	width: 40%;
 	border-radius: 10px;
+	font-family: "Times New Roman", Times, serif;
 	margin-left: 15px;
 }
 
@@ -192,6 +207,7 @@
 
 .blik-modal-content {
 	position: relative;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 30px;
 	text-align: center;
 	padding: 20px;
@@ -236,6 +252,11 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 	color: #000;
 }
 
+#dark .promo-code input {
+	background-color: #333;	
+	color: #ccc;
+}
+
 #dark button:hover {
 	color: white;
 	cursor: pointer;
@@ -245,7 +266,7 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 #dark button {
 	color: white;
 	cursor: pointer;
-	padding-left: 5px;
+	
 }
 
 .promo-code input {
@@ -281,6 +302,8 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 }
 
 .company-details {
+	font-family: "Times New Roman", Times, serif;
+	font-family: "Times New Roman", Times, serif;
 	text-align: center;
 	font-size: 30px;
 	color: black;
@@ -292,5 +315,6 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
 }
 
 .company-detail-input {
+	font-family: "Times New Roman", Times, serif;
 	width: 100%;
 }

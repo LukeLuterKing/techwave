@@ -4,7 +4,7 @@ import { ShoppingCart, User, Microphone, Scales } from "phosphor-react";
 import ThemeSwitchButton from "../components/ThemeSwitchButton";
 import "./navbar.css";
 import useAuthContext from "../context/AuthContext";
-import flagaImage2 from '../assets/products/flaga2.png';
+import flagaImage2 from '../assets/products/flaga2.jpg';
 import flagaImage from '../assets/products/flaga.png';
 import logo from '../assets/products/logo.png';
 
