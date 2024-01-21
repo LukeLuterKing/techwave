@@ -30,7 +30,7 @@ const Orders = () => {
   }, []);
 
   const handleReturn = async (orderId) => {
-    const confirmReturn = window.confirm(t("alert.confirm"));
+    const confirmReturn = window.confirm(t("alerts.confirm"));
     if (!confirmReturn) {
       return;
     }
